@@ -1,0 +1,28 @@
+{
+  "name": "ReactComment",
+  "version": "0.0.1",
+  "author": "Giannis Chionidis",
+  "description": "Starting tutorial",
+  "dependencies": {
+    "underscore": "1.6.x",
+    "react-dom": "~0.14.7",
+    "react": "~0.14.7",
+    "browserify": "~13.0.0",
+    "babelify": "~7.2.0",
+    "babel-preset-react": "~6.5.0",
+    "jquery": "~2.2.2",
+    "marked": "~0.3.5",
+    "install": "~0.6.1",
+    "npm": "~3.8.3",
+    "react-select2-wrapper": "~0.5.1"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "watchify": "latest"
+  },
+  "scripts": {
+    "preinstall": "npm install --save react react-dom babelify babel-preset-react browserify jquery marker react-select2-wrapper",
+    "build-js": "browserify -t [ babelify --presets [ react ] ] src/main.js -o build/app.js",
+    "watch-js": "watchify -t [ babelify --presets [ react ] ] src/main.js -o build/app.js"
+  }
+}

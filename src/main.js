@@ -4,10 +4,13 @@
  * You do not have to return basic HTML.
  * You can return a tree of components that you (or someone else) built.
  */
-/*var data = [
-  {id: 1, author: "Pete Hunt", text: "This is a comment"},
-  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
-];*/
+var $ = require('jquery');
+var marked = require('marked');
+var Select2 = require('react-select2-wrapper');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Babelify = require('babelify');
+var Babel = require('babel-preset-react');
 
 var CommentList = React.createClass({
   render: function() {
@@ -99,6 +102,17 @@ var CommentForm = React.createClass({
           value={this.state.text}
           onChange={this.handleTextChange}
         />
+        <Select2
+            multiple
+            options={
+                {
+                    placeholder: 'ingridient',
+                    tags: true,
+                    tokenSeparators: [',', ' ']
+                }
+            }
+        />
+        <span>Was the food disturbing?</span><input type="checkbox" name="food_disturbing" value="Yes"/>
         <input type="submit" value="Post" />
       </form>
     );
