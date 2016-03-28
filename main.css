@@ -1,0 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 27, 2016, 12:13:11 PM
+    Author     : lebowski
+*/
+
+#content .ingridient .select2-container {
+    width: 33%!important;
+}
